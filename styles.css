@@ -552,35 +552,33 @@ body {
   flex-shrink: 0;
 }
 
-.role-description {
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--text-highlight);
+/* --- Role Content Blocks --- */
+.role-block {
   margin-bottom: 1.15rem;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-  font-style: italic;
 }
 
-/* --- Focus Chips Section --- */
-.role-section {
-  margin-bottom: 1rem;
-}
-
-.section-label {
+.block-label {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.09em;
   color: var(--accent-cyan);
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.35rem;
   text-transform: uppercase;
 }
 
+.role-description {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-highlight);
+  font-style: italic;
+}
+
+/* --- Focus Chips Section --- */
 .chips-list {
   display: flex;
   flex-wrap: wrap;
@@ -602,36 +600,79 @@ body {
   line-height: 1.25;
 }
 
-/* --- THINK Callout Box --- */
+/* --- Action List for WHAT YOU CAN DO --- */
+.action-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.action-item {
+  font-size: 0.865rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.action-item::before {
+  content: '•';
+  color: var(--accent-teal);
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* --- Strong Visual Callout: DURING THE SIMULATION, ASK YOURSELF --- */
 .think-callout {
-  background: var(--callout-bg);
-  border: 1px solid rgba(14, 165, 233, 0.32);
-  border-left: 3.5px solid var(--callout-border);
+  background: linear-gradient(135deg, rgba(8, 47, 73, 0.6) 0%, rgba(13, 148, 136, 0.22) 100%);
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  border-left: 4px solid var(--accent-cyan);
   border-radius: var(--radius-sm);
-  padding: 0.875rem 0.95rem;
-  margin-bottom: 0.85rem;
+  padding: 0.95rem 1rem;
+  margin-bottom: 0.95rem;
   position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 .think-header {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   color: var(--accent-cyan-light);
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.35rem;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.65rem;
   text-transform: uppercase;
 }
 
-.think-quote {
-  font-size: 0.925rem;
+.ask-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.ask-item {
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.45;
   color: #ffffff;
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.ask-item::before {
+  content: '—';
+  color: var(--accent-cyan);
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 /* Choose Another Role Action */
@@ -769,18 +810,45 @@ body {
 }
 
 .lens-closing-box {
-  background: rgba(6, 182, 212, 0.08);
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  background: rgba(6, 182, 212, 0.09);
+  border: 1px solid rgba(6, 182, 212, 0.28);
   border-radius: var(--radius-md);
-  padding: 1rem 0.875rem;
+  padding: 1.2rem 1rem;
+  text-align: center;
+}
+
+.lens-reminder-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-cyan-light);
+  background: rgba(6, 182, 212, 0.16);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+}
+
+.lens-reminder-heading {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
 }
 
 .lens-closing-text {
-  font-size: 0.9rem;
+  font-size: 0.925rem;
   font-weight: 500;
   line-height: 1.5;
   color: var(--text-highlight);
   font-style: italic;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 /* --- Minimal Workshop Footer --- */
