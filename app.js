@@ -13,7 +13,9 @@
   const roleCards = document.querySelectorAll('.role-card');
   const navPills = document.querySelectorAll('.nav-pill');
   const selectorCards = document.querySelectorAll('.role-select-card');
-  const backButtons = document.querySelectorAll('.back-to-top-btn');
+  const chooseAnotherRoleBtns = document.querySelectorAll('.back-to-top-btn');
+  const stickyPillsScroll = document.getElementById('stickyPillsScroll');
+  const scrollFadeEdge = document.querySelector('.scroll-fade-edge');
 
   // Helper: Smooth scroll with offset for sticky nav
   function scrollToRole(targetId) {
@@ -27,7 +29,7 @@
     const navHeight = stickyNav ? stickyNav.offsetHeight : 0;
     const elementRect = targetElement.getBoundingClientRect();
     const absoluteElementTop = elementRect.top + window.pageYOffset;
-    const targetScrollY = Math.max(0, absoluteElementTop - navHeight - 14);
+    const targetScrollY = Math.max(0, absoluteElementTop - navHeight - 12);
 
     window.scrollTo({
       top: targetScrollY,
@@ -54,7 +56,7 @@
       pill.setAttribute('aria-selected', match ? 'true' : 'false');
 
       if (match) {
-        // Ensure pill is visible in sticky horizontal scroll
+        // Ensure pill is centered in sticky horizontal scroll
         pill.scrollIntoView({
           behavior: 'smooth',
           inline: 'center',
@@ -64,9 +66,26 @@
     });
   }
 
+  // Update scroll fade indicator on sticky nav
+  function checkScrollFade() {
+    if (!stickyPillsScroll || !scrollFadeEdge) return;
+    const maxScroll = stickyPillsScroll.scrollWidth - stickyPillsScroll.clientWidth;
+    if (maxScroll <= 5) {
+      scrollFadeEdge.style.opacity = '0';
+    } else {
+      const atEnd = stickyPillsScroll.scrollLeft >= maxScroll - 12;
+      scrollFadeEdge.style.opacity = atEnd ? '0' : '0.85';
+    }
+  }
+
+  if (stickyPillsScroll) {
+    stickyPillsScroll.addEventListener('scroll', checkScrollFade, { passive: true });
+    window.addEventListener('resize', checkScrollFade, { passive: true });
+  }
+
   // Hero Card Click Handlers
   selectorCards.forEach(card => {
-    card.addEventListener('click', (e) => {
+    card.addEventListener('click', () => {
       const targetId = card.getAttribute('data-target');
       if (targetId) {
         scrollToRole(targetId);
@@ -76,7 +95,7 @@
 
   // Sticky Nav Pill Click Handlers
   navPills.forEach(pill => {
-    pill.addEventListener('click', (e) => {
+    pill.addEventListener('click', () => {
       const targetId = pill.getAttribute('data-target');
       if (targetId) {
         scrollToRole(targetId);
@@ -84,12 +103,20 @@
     });
   });
 
-  // "Back to roles" button handlers
-  backButtons.forEach(btn => {
+  // "Choose another role" button handlers
+  chooseAnotherRoleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const topTarget = document.getElementById('top');
-      if (topTarget) {
-        topTarget.scrollIntoView({ behavior: 'smooth' });
+      const heroSection = document.getElementById('top');
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: 'smooth' });
+        // After smooth scroll, clean active target styling
+        setTimeout(() => {
+          roleCards.forEach(card => card.classList.remove('is-active-target'));
+          navPills.forEach(pill => {
+            pill.classList.remove('active');
+            pill.setAttribute('aria-selected', 'false');
+          });
+        }, 300);
       }
     });
   });
@@ -102,6 +129,7 @@
           // When hero selector grid goes out of view above, show sticky nav
           if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
             stickyNav.classList.add('is-visible');
+            checkScrollFade();
           } else {
             stickyNav.classList.remove('is-visible');
           }

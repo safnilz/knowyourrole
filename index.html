@@ -33,14 +33,17 @@
   <!-- Sticky Quick Role Selector (appears when scrolling past hero) -->
   <header class="sticky-nav" id="stickyNav" aria-label="Quick role navigation">
     <div class="sticky-nav-inner">
-      <span class="sticky-nav-label">YOUR ROLE:</span>
-      <div class="sticky-pills-scroll" role="tablist" aria-label="Simulation Roles Quick Switcher">
-        <button type="button" class="nav-pill" data-target="role-producer" role="tab" aria-selected="false">Producer</button>
-        <button type="button" class="nav-pill" data-target="role-distributor" role="tab" aria-selected="false">Distributor</button>
-        <button type="button" class="nav-pill" data-target="role-retailer" role="tab" aria-selected="false">Retailer</button>
-        <button type="button" class="nav-pill" data-target="role-hospitality" role="tab" aria-selected="false">Hospitality</button>
-        <button type="button" class="nav-pill" data-target="role-redistribution" role="tab" aria-selected="false">Redistribution</button>
-        <button type="button" class="nav-pill" data-target="role-recovery" role="tab" aria-selected="false">Recovery</button>
+      <span class="sticky-nav-label">ROLE:</span>
+      <div class="sticky-pills-scroll-container">
+        <div class="sticky-pills-scroll" role="tablist" aria-label="Simulation Roles Quick Switcher" id="stickyPillsScroll">
+          <button type="button" class="nav-pill" data-target="role-producer" role="tab" aria-selected="false">Producer</button>
+          <button type="button" class="nav-pill" data-target="role-distributor" role="tab" aria-selected="false">Distributor</button>
+          <button type="button" class="nav-pill" data-target="role-retailer" role="tab" aria-selected="false">Retailer</button>
+          <button type="button" class="nav-pill" data-target="role-hospitality" role="tab" aria-selected="false">Hospitality</button>
+          <button type="button" class="nav-pill" data-target="role-redistribution" role="tab" aria-selected="false">Redistribution Partner</button>
+          <button type="button" class="nav-pill" data-target="role-recovery" role="tab" aria-selected="false">Recovery Partner</button>
+        </div>
+        <div class="scroll-fade-edge" aria-hidden="true"></div>
       </div>
     </div>
   </header>
@@ -57,14 +60,13 @@
       <p class="hero-subtitle">FOOD IS NOT WASTE<sup>®</sup> Simulation</p>
 
       <p class="hero-copy">
-        Find your assigned role below. During the simulation, think and make decisions as this actor.
+        Select the role assigned to you. During the simulation, think and make decisions as this actor.
       </p>
 
       <!-- ROLE SELECTOR CARDS / BUTTONS -->
       <nav class="role-selector-grid" aria-label="Role selector">
         <button type="button" class="role-select-card" data-target="role-producer" aria-controls="role-producer">
           <div class="selector-card-header">
-            <span class="role-num-tag">01</span>
             <div class="selector-icon" aria-hidden="true">
               <!-- Producer icon (leaf / harvest / sprout) -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -74,29 +76,27 @@
             </div>
           </div>
           <span class="selector-role-name">Producer</span>
-          <span class="selector-action">View Brief <span class="arrow" aria-hidden="true">↓</span></span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
         <button type="button" class="role-select-card" data-target="role-distributor" aria-controls="role-distributor">
           <div class="selector-card-header">
-            <span class="role-num-tag">02</span>
             <div class="selector-icon" aria-hidden="true">
               <!-- Distributor icon (truck / logistics) -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="1" y="3" width="15" height="13" rx="1"/>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
                 <circle cx="5.5" cy="18.5" r="2.5"/>
                 <circle cx="18.5" cy="18.5" r="2.5"/>
               </svg>
             </div>
           </div>
           <span class="selector-role-name">Distributor</span>
-          <span class="selector-action">View Brief <span class="arrow" aria-hidden="true">↓</span></span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
         <button type="button" class="role-select-card" data-target="role-retailer" aria-controls="role-retailer">
           <div class="selector-card-header">
-            <span class="role-num-tag">03</span>
             <div class="selector-icon" aria-hidden="true">
               <!-- Retailer icon (store / storefront) -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -108,12 +108,11 @@
             </div>
           </div>
           <span class="selector-role-name">Retailer</span>
-          <span class="selector-action">View Brief <span class="arrow" aria-hidden="true">↓</span></span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
         <button type="button" class="role-select-card" data-target="role-hospitality" aria-controls="role-hospitality">
           <div class="selector-card-header">
-            <span class="role-num-tag">04</span>
             <div class="selector-icon" aria-hidden="true">
               <!-- Hospitality icon (plate / cutlery / cloche) -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -125,12 +124,11 @@
             </div>
           </div>
           <span class="selector-role-name">Hospitality</span>
-          <span class="selector-action">View Brief <span class="arrow" aria-hidden="true">↓</span></span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
         <button type="button" class="role-select-card" data-target="role-redistribution" aria-controls="role-redistribution">
           <div class="selector-card-header">
-            <span class="role-num-tag">05</span>
             <div class="selector-icon" aria-hidden="true">
               <!-- Redistribution Partner icon (hands / sharing / heart care) -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -139,12 +137,11 @@
             </div>
           </div>
           <span class="selector-role-name">Redistribution Partner</span>
-          <span class="selector-action">View Brief <span class="arrow" aria-hidden="true">↓</span></span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
         <button type="button" class="role-select-card" data-target="role-recovery" aria-controls="role-recovery">
           <div class="selector-card-header">
-            <span class="role-num-tag">06</span>
             <div class="selector-icon" aria-hidden="true">
               <!-- Recovery Partner icon (circular economy / loop arrows) -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -155,7 +152,7 @@
             </div>
           </div>
           <span class="selector-role-name">Recovery Partner</span>
-          <span class="selector-action">View Brief <span class="arrow" aria-hidden="true">↓</span></span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
       </nav>
     </header>
@@ -170,16 +167,13 @@
     <!-- ROLE DETAILS CONTAINER -->
     <section class="roles-container" aria-label="Detailed role descriptions">
 
-      <!-- ROLE 1: PRODUCER -->
+      <!-- ROLE: PRODUCER -->
       <article class="role-card" id="role-producer" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <div class="role-meta">
-            <span class="role-pill">ROLE 01</span>
-            <h2 class="role-title">Producer</h2>
-          </div>
+          <h2 class="role-title">Producer</h2>
           <div class="role-badge-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
               <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
             </svg>
@@ -215,22 +209,19 @@
         </div>
 
         <div class="card-footer-action">
-          <button type="button" class="back-to-top-btn" data-target="top">↑ Back to roles</button>
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
         </div>
       </article>
 
-      <!-- ROLE 2: DISTRIBUTOR -->
+      <!-- ROLE: DISTRIBUTOR -->
       <article class="role-card" id="role-distributor" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <div class="role-meta">
-            <span class="role-pill">ROLE 02</span>
-            <h2 class="role-title">Distributor</h2>
-          </div>
+          <h2 class="role-title">Distributor</h2>
           <div class="role-badge-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="1" y="3" width="15" height="13" rx="1"/>
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
               <circle cx="5.5" cy="18.5" r="2.5"/>
               <circle cx="18.5" cy="18.5" r="2.5"/>
             </svg>
@@ -267,20 +258,17 @@
         </div>
 
         <div class="card-footer-action">
-          <button type="button" class="back-to-top-btn" data-target="top">↑ Back to roles</button>
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
         </div>
       </article>
 
-      <!-- ROLE 3: RETAILER -->
+      <!-- ROLE: RETAILER -->
       <article class="role-card" id="role-retailer" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <div class="role-meta">
-            <span class="role-pill">ROLE 03</span>
-            <h2 class="role-title">Retailer</h2>
-          </div>
+          <h2 class="role-title">Retailer</h2>
           <div class="role-badge-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/>
               <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
               <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/>
@@ -318,20 +306,17 @@
         </div>
 
         <div class="card-footer-action">
-          <button type="button" class="back-to-top-btn" data-target="top">↑ Back to roles</button>
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
         </div>
       </article>
 
-      <!-- ROLE 4: HOSPITALITY -->
+      <!-- ROLE: HOSPITALITY -->
       <article class="role-card" id="role-hospitality" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <div class="role-meta">
-            <span class="role-pill">ROLE 04</span>
-            <h2 class="role-title">Hospitality</h2>
-          </div>
+          <h2 class="role-title">Hospitality</h2>
           <div class="role-badge-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/>
               <path d="M15 11v11"/>
               <path d="M6 2v20"/>
@@ -370,20 +355,17 @@
         </div>
 
         <div class="card-footer-action">
-          <button type="button" class="back-to-top-btn" data-target="top">↑ Back to roles</button>
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
         </div>
       </article>
 
-      <!-- ROLE 5: REDISTRIBUTION PARTNER -->
+      <!-- ROLE: REDISTRIBUTION PARTNER -->
       <article class="role-card" id="role-redistribution" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <div class="role-meta">
-            <span class="role-pill">ROLE 05</span>
-            <h2 class="role-title">Redistribution Partner</h2>
-          </div>
+          <h2 class="role-title">Redistribution Partner</h2>
           <div class="role-badge-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
             </svg>
           </div>
@@ -419,20 +401,17 @@
         </div>
 
         <div class="card-footer-action">
-          <button type="button" class="back-to-top-btn" data-target="top">↑ Back to roles</button>
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
         </div>
       </article>
 
-      <!-- ROLE 6: RECOVERY PARTNER -->
+      <!-- ROLE: RECOVERY PARTNER -->
       <article class="role-card" id="role-recovery" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <div class="role-meta">
-            <span class="role-pill">ROLE 06</span>
-            <h2 class="role-title">Recovery Partner</h2>
-          </div>
+          <h2 class="role-title">Recovery Partner</h2>
           <div class="role-badge-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
               <path d="M11 19h8.2a1.8 1.8 0 0 0 1.571-.88 1.78 1.78 0 0 0 .004-1.78L16.8 9.5"/>
               <path d="M13 3.5 8.9 9.5h6.2L11 3.5Z"/>
@@ -469,7 +448,7 @@
         </div>
 
         <div class="card-footer-action">
-          <button type="button" class="back-to-top-btn" data-target="top">↑ Back to roles</button>
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
         </div>
       </article>
 
@@ -492,11 +471,11 @@
 
         <div class="questions-grid">
           <div class="question-card">
-            <div class="question-num">QUESTION 01</div>
+            <div class="question-num">PRINCIPLE 01</div>
             <div class="question-text">“What are you protecting?”</div>
           </div>
           <div class="question-card">
-            <div class="question-num">QUESTION 02</div>
+            <div class="question-num">PRINCIPLE 02</div>
             <div class="question-text">“What might your decision shift elsewhere?”</div>
           </div>
         </div>

@@ -2,7 +2,7 @@
    FOOD IS NOT WASTE® — "KNOW YOUR ROLE"
    Workshop Companion Stylesheet
    Mobile-first, Executive Dark Navy & Cyan/Teal Palette
-   Optimized for Dubai Chambers professional workshop
+   Refined for Dubai Chambers professional workshop
    ========================================================================== */
 
 /* --- CSS Variables / Design Tokens --- */
@@ -145,13 +145,13 @@ body {
   right: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(7, 10, 19, 0.92);
+  background: rgba(7, 10, 19, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.16);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.18);
   transform: translateY(-100%);
   transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
 }
 
 .sticky-nav.is-visible {
@@ -179,20 +179,41 @@ body {
   flex-shrink: 0;
 }
 
-.sticky-pills-scroll {
-  display: flex;
-  gap: 0.4rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 2px 2px 4px 2px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+/* Pill Scroll Container with Visual Swipe Hint */
+.sticky-pills-scroll-container {
+  position: relative;
   flex: 1;
   min-width: 0; /* Prevents overflow blowout */
+  display: flex;
+  align-items: center;
+}
+
+.sticky-pills-scroll {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 2px 28px 4px 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;
 }
 
 .sticky-pills-scroll::-webkit-scrollbar {
   display: none;
+}
+
+/* Right edge fade indicating more content can be swiped */
+.scroll-fade-edge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  background: linear-gradient(to right, transparent, rgba(7, 10, 19, 0.95));
+  pointer-events: none;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  opacity: 0.85;
 }
 
 .nav-pill {
@@ -336,7 +357,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 104px;
+  min-height: 102px;
   min-width: 0; /* Crucial: allows grid items to shrink */
   transition: all var(--transition-standard);
   position: relative;
@@ -376,21 +397,10 @@ body {
 .selector-card-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 1;
-}
-
-.role-num-tag {
-  font-family: var(--font-mono);
-  font-size: 0.725rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.12);
-  padding: 0.15rem 0.4rem;
-  border-radius: var(--radius-sm);
-  letter-spacing: 0.04em;
 }
 
 .selector-icon {
@@ -475,7 +485,7 @@ body {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  padding: 1.35rem 1.15rem 1.2rem;
+  padding: 1.35rem 1.15rem 1.25rem;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -514,29 +524,14 @@ body {
 
 .role-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-.role-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.role-pill {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--accent-cyan-light);
-  display: inline-flex;
-}
-
 .role-title {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--text-primary);
   line-height: 1.2;
@@ -613,7 +608,7 @@ body {
   border-left: 3.5px solid var(--callout-border);
   border-radius: var(--radius-sm);
   padding: 0.875rem 0.95rem;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.85rem;
   position: relative;
 }
 
@@ -638,27 +633,40 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Card bottom mini-nav */
+/* Choose Another Role Action */
 .card-footer-action {
   display: flex;
   justify-content: flex-end;
-  margin-top: 0.35rem;
+  margin-top: 0.45rem;
 }
 
 .back-to-top-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  font-size: 0.725rem;
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.775rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 0.35rem 0.5rem;
-  border-radius: var(--radius-sm);
-  transition: color var(--transition-fast);
+  padding: 0.45rem 0.95rem;
+  border-radius: 9999px;
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
 }
 
-.back-to-top-btn:hover {
-  color: var(--accent-cyan);
+.back-to-top-btn:hover,
+.back-to-top-btn:focus-visible {
+  color: var(--accent-cyan-light);
+  border-color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.14);
+  outline: none;
+}
+
+.back-to-top-btn:active {
+  transform: scale(0.97);
 }
 
 /* --- Final Section: YOUR DECISION LENS --- */
@@ -817,7 +825,7 @@ body {
 
   .role-select-card {
     padding: 0.75rem 0.65rem;
-    min-height: 98px;
+    min-height: 96px;
   }
 
   .selector-role-name {
@@ -829,7 +837,7 @@ body {
   }
 
   .role-title {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .chip {
