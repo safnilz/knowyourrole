@@ -357,7 +357,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 102px;
+  min-height: 108px;
   min-width: 0; /* Crucial: allows grid items to shrink */
   transition: all var(--transition-standard);
   position: relative;
@@ -416,14 +416,15 @@ body {
 }
 
 .selector-role-name {
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.25;
   margin-bottom: 0.4rem;
   position: relative;
   z-index: 1;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .selector-action {
@@ -825,11 +826,12 @@ body {
 
   .role-select-card {
     padding: 0.75rem 0.65rem;
-    min-height: 96px;
+    min-height: 104px;
   }
 
   .selector-role-name {
-    font-size: 0.8125rem;
+    font-size: 0.785rem;
+    line-height: 1.22;
   }
 
   .role-card {

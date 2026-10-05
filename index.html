@@ -36,12 +36,14 @@
       <span class="sticky-nav-label">ROLE:</span>
       <div class="sticky-pills-scroll-container">
         <div class="sticky-pills-scroll" role="tablist" aria-label="Simulation Roles Quick Switcher" id="stickyPillsScroll">
-          <button type="button" class="nav-pill" data-target="role-producer" role="tab" aria-selected="false">Producer</button>
-          <button type="button" class="nav-pill" data-target="role-distributor" role="tab" aria-selected="false">Distributor</button>
+          <button type="button" class="nav-pill" data-target="role-local-producer" role="tab" aria-selected="false">Local Producer</button>
+          <button type="button" class="nav-pill" data-target="role-importer-manufacturer" role="tab" aria-selected="false">Importer / Manufacturer</button>
+          <button type="button" class="nav-pill" data-target="role-distributor-cold-chain" role="tab" aria-selected="false">Distributor / Cold Chain</button>
           <button type="button" class="nav-pill" data-target="role-retailer" role="tab" aria-selected="false">Retailer</button>
-          <button type="button" class="nav-pill" data-target="role-hospitality" role="tab" aria-selected="false">Hospitality</button>
-          <button type="button" class="nav-pill" data-target="role-redistribution" role="tab" aria-selected="false">Redistribution Partner</button>
-          <button type="button" class="nav-pill" data-target="role-recovery" role="tab" aria-selected="false">Recovery Partner</button>
+          <button type="button" class="nav-pill" data-target="role-hospitality-fb" role="tab" aria-selected="false">Hospitality / F&B</button>
+          <button type="button" class="nav-pill" data-target="role-corporate-buyer" role="tab" aria-selected="false">Corporate / Institutional Buyer</button>
+          <button type="button" class="nav-pill" data-target="role-redistribution-partner" role="tab" aria-selected="false">Redistribution Partner</button>
+          <button type="button" class="nav-pill" data-target="role-circular-resource-partner" role="tab" aria-selected="false">Circular Resource Partner</button>
         </div>
         <div class="scroll-fade-edge" aria-hidden="true"></div>
       </div>
@@ -63,42 +65,60 @@
         Select the role assigned to you. During the simulation, think and make decisions as this actor.
       </p>
 
-      <!-- ROLE SELECTOR CARDS / BUTTONS -->
+      <!-- ROLE SELECTOR CARDS / BUTTONS (8 ROLES) -->
       <nav class="role-selector-grid" aria-label="Role selector">
-        <button type="button" class="role-select-card" data-target="role-producer" aria-controls="role-producer">
+        <!-- 1. LOCAL PRODUCER -->
+        <button type="button" class="role-select-card" data-target="role-local-producer" aria-controls="role-local-producer">
           <div class="selector-card-header">
             <div class="selector-icon" aria-hidden="true">
-              <!-- Producer icon (leaf / harvest / sprout) -->
+              <!-- Leaf / agriculture icon -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
                 <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
               </svg>
             </div>
           </div>
-          <span class="selector-role-name">Producer</span>
+          <span class="selector-role-name">Local Producer</span>
           <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
-        <button type="button" class="role-select-card" data-target="role-distributor" aria-controls="role-distributor">
+        <!-- 2. IMPORTER / MANUFACTURER -->
+        <button type="button" class="role-select-card" data-target="role-importer-manufacturer" aria-controls="role-importer-manufacturer">
           <div class="selector-card-header">
             <div class="selector-icon" aria-hidden="true">
-              <!-- Distributor icon (truck / logistics) -->
+              <!-- Factory / processing / manufacturing icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20h20"/>
+                <path d="M6 20V10l6 4V8l6 4V4h4v16"/>
+              </svg>
+            </div>
+          </div>
+          <span class="selector-role-name">Importer / Manufacturer</span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
+        </button>
+
+        <!-- 3. DISTRIBUTOR / COLD CHAIN -->
+        <button type="button" class="role-select-card" data-target="role-distributor-cold-chain" aria-controls="role-distributor-cold-chain">
+          <div class="selector-card-header">
+            <div class="selector-icon" aria-hidden="true">
+              <!-- Refrigerated transport truck icon -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="1" y="3" width="15" height="13" rx="1"/>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
                 <circle cx="5.5" cy="18.5" r="2.5"/>
                 <circle cx="18.5" cy="18.5" r="2.5"/>
               </svg>
             </div>
           </div>
-          <span class="selector-role-name">Distributor</span>
+          <span class="selector-role-name">Distributor / Cold Chain</span>
           <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
+        <!-- 4. RETAILER -->
         <button type="button" class="role-select-card" data-target="role-retailer" aria-controls="role-retailer">
           <div class="selector-card-header">
             <div class="selector-icon" aria-hidden="true">
-              <!-- Retailer icon (store / storefront) -->
+              <!-- Storefront icon -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/>
                 <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
@@ -111,10 +131,11 @@
           <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
-        <button type="button" class="role-select-card" data-target="role-hospitality" aria-controls="role-hospitality">
+        <!-- 5. HOSPITALITY / F&B -->
+        <button type="button" class="role-select-card" data-target="role-hospitality-fb" aria-controls="role-hospitality-fb">
           <div class="selector-card-header">
             <div class="selector-icon" aria-hidden="true">
-              <!-- Hospitality icon (plate / cutlery / cloche) -->
+              <!-- Cutlery / dining icon -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/>
                 <path d="M15 11v11"/>
@@ -123,14 +144,39 @@
               </svg>
             </div>
           </div>
-          <span class="selector-role-name">Hospitality</span>
+          <span class="selector-role-name">Hospitality / F&B</span>
           <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
-        <button type="button" class="role-select-card" data-target="role-redistribution" aria-controls="role-redistribution">
+        <!-- 6. CORPORATE / INSTITUTIONAL BUYER -->
+        <button type="button" class="role-select-card" data-target="role-corporate-buyer" aria-controls="role-corporate-buyer">
           <div class="selector-card-header">
             <div class="selector-icon" aria-hidden="true">
-              <!-- Redistribution Partner icon (hands / sharing / heart care) -->
+              <!-- Building / corporate institution icon -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                <path d="M9 22v-4h6v4"/>
+                <path d="M8 6h.01"/>
+                <path d="M16 6h.01"/>
+                <path d="M12 6h.01"/>
+                <path d="M8 10h.01"/>
+                <path d="M16 10h.01"/>
+                <path d="M12 10h.01"/>
+                <path d="M8 14h.01"/>
+                <path d="M16 14h.01"/>
+                <path d="M12 14h.01"/>
+              </svg>
+            </div>
+          </div>
+          <span class="selector-role-name">Corporate / Institutional Buyer</span>
+          <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
+        </button>
+
+        <!-- 7. REDISTRIBUTION PARTNER -->
+        <button type="button" class="role-select-card" data-target="role-redistribution-partner" aria-controls="role-redistribution-partner">
+          <div class="selector-card-header">
+            <div class="selector-icon" aria-hidden="true">
+              <!-- Heart care / sharing surplus icon -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
               </svg>
@@ -140,10 +186,11 @@
           <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
 
-        <button type="button" class="role-select-card" data-target="role-recovery" aria-controls="role-recovery">
+        <!-- 8. CIRCULAR RESOURCE PARTNER -->
+        <button type="button" class="role-select-card" data-target="role-circular-resource-partner" aria-controls="role-circular-resource-partner">
           <div class="selector-card-header">
             <div class="selector-icon" aria-hidden="true">
-              <!-- Recovery Partner icon (circular economy / loop arrows) -->
+              <!-- Circular economy / recovery loop arrows icon -->
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
                 <path d="M11 19h8.2a1.8 1.8 0 0 0 1.571-.88 1.78 1.78 0 0 0 .004-1.78L16.8 9.5"/>
@@ -151,7 +198,7 @@
               </svg>
             </div>
           </div>
-          <span class="selector-role-name">Recovery Partner</span>
+          <span class="selector-role-name">Circular Resource Partner</span>
           <span class="selector-action">View Role <span class="arrow" aria-hidden="true">↓</span></span>
         </button>
       </nav>
@@ -167,11 +214,11 @@
     <!-- ROLE DETAILS CONTAINER -->
     <section class="roles-container" aria-label="Detailed role descriptions">
 
-      <!-- ROLE: PRODUCER -->
-      <article class="role-card" id="role-producer" tabindex="-1">
+      <!-- 1. LOCAL PRODUCER -->
+      <article class="role-card" id="role-local-producer" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <h2 class="role-title">Producer</h2>
+          <h2 class="role-title">Local Producer</h2>
           <div class="role-badge-icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
@@ -181,7 +228,7 @@
         </div>
 
         <p class="role-description">
-          “You grow, manufacture or prepare food before it moves through the system.”
+          “You grow or produce food locally and supply it into the food system.”
         </p>
 
         <div class="role-section">
@@ -189,12 +236,13 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
             YOUR FOCUS
           </div>
-          <ul class="chips-list" aria-label="Producer focus areas">
-            <li class="chip">Demand</li>
+          <ul class="chips-list" aria-label="Local Producer focus areas">
             <li class="chip">Production</li>
+            <li class="chip">Demand</li>
             <li class="chip">Quality</li>
             <li class="chip">Shelf life</li>
-            <li class="chip">Avoiding overproduction</li>
+            <li class="chip">Forecasting</li>
+            <li class="chip">Surplus</li>
           </ul>
         </div>
 
@@ -205,7 +253,7 @@
             </svg>
             <span>THINK</span>
           </div>
-          <p class="think-quote">“What should we produce, and what happens if demand changes?”</p>
+          <p class="think-quote">“How much should we produce, and what happens if demand changes?”</p>
         </div>
 
         <div class="card-footer-action">
@@ -213,11 +261,58 @@
         </div>
       </article>
 
-      <!-- ROLE: DISTRIBUTOR -->
-      <article class="role-card" id="role-distributor" tabindex="-1">
+      <!-- 2. IMPORTER / MANUFACTURER -->
+      <article class="role-card" id="role-importer-manufacturer" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <h2 class="role-title">Distributor</h2>
+          <h2 class="role-title">Importer / Manufacturer</h2>
+          <div class="role-badge-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20h20"/>
+              <path d="M6 20V10l6 4V8l6 4V4h4v16"/>
+            </svg>
+          </div>
+        </div>
+
+        <p class="role-description">
+          “You import food or ingredients, or manufacture food products before they move through the market.”
+        </p>
+
+        <div class="role-section">
+          <div class="section-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            YOUR FOCUS
+          </div>
+          <ul class="chips-list" aria-label="Importer / Manufacturer focus areas">
+            <li class="chip">Demand forecasting</li>
+            <li class="chip">Inventory</li>
+            <li class="chip">Production</li>
+            <li class="chip">Shelf life</li>
+            <li class="chip">Supply commitments</li>
+            <li class="chip">Surplus</li>
+          </ul>
+        </div>
+
+        <div class="think-callout">
+          <div class="think-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>THINK</span>
+          </div>
+          <p class="think-quote">“What should we bring into the system, and what happens if demand is lower than expected?”</p>
+        </div>
+
+        <div class="card-footer-action">
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
+        </div>
+      </article>
+
+      <!-- 3. DISTRIBUTOR / COLD CHAIN -->
+      <article class="role-card" id="role-distributor-cold-chain" tabindex="-1">
+        <div class="card-accent-bar" aria-hidden="true"></div>
+        <div class="role-header">
+          <h2 class="role-title">Distributor / Cold Chain</h2>
           <div class="role-badge-icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="1" y="3" width="15" height="13" rx="1"/>
@@ -229,7 +324,7 @@
         </div>
 
         <p class="role-description">
-          “You store and move food between organisations.”
+          “You store and move food between organisations while maintaining the conditions needed to protect its quality and safety.”
         </p>
 
         <div class="role-section">
@@ -237,7 +332,7 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
             YOUR FOCUS
           </div>
-          <ul class="chips-list" aria-label="Distributor focus areas">
+          <ul class="chips-list" aria-label="Distributor / Cold Chain focus areas">
             <li class="chip">Inventory</li>
             <li class="chip">Transport</li>
             <li class="chip">Timing</li>
@@ -254,7 +349,7 @@
             </svg>
             <span>THINK</span>
           </div>
-          <p class="think-quote">“Where is the food now, and can it be stopped or redirected?”</p>
+          <p class="think-quote">“Where is the food now, and can we stop, store or redirect it before value is lost?”</p>
         </div>
 
         <div class="card-footer-action">
@@ -262,7 +357,7 @@
         </div>
       </article>
 
-      <!-- ROLE: RETAILER -->
+      <!-- 4. RETAILER -->
       <article class="role-card" id="role-retailer" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
@@ -291,6 +386,7 @@
             <li class="chip">Stock levels</li>
             <li class="chip">Shelf life</li>
             <li class="chip">Storage</li>
+            <li class="chip">Promotions</li>
             <li class="chip">Unsold products</li>
           </ul>
         </div>
@@ -302,7 +398,7 @@
             </svg>
             <span>THINK</span>
           </div>
-          <p class="think-quote">“Can we sell or redirect this before it loses value?”</p>
+          <p class="think-quote">“Can we sell or redirect this food before it loses value?”</p>
         </div>
 
         <div class="card-footer-action">
@@ -310,11 +406,11 @@
         </div>
       </article>
 
-      <!-- ROLE: HOSPITALITY -->
-      <article class="role-card" id="role-hospitality" tabindex="-1">
+      <!-- 5. HOSPITALITY / F&B -->
+      <article class="role-card" id="role-hospitality-fb" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <h2 class="role-title">Hospitality</h2>
+          <h2 class="role-title">Hospitality / F&B</h2>
           <div class="role-badge-icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/>
@@ -326,7 +422,7 @@
         </div>
 
         <p class="role-description">
-          “You prepare and serve food through hotels, restaurants, catering or events.”
+          “You purchase, prepare and serve food through hotels, restaurants, catering or other food-service operations.”
         </p>
 
         <div class="role-section">
@@ -334,12 +430,12 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
             YOUR FOCUS
           </div>
-          <ul class="chips-list" aria-label="Hospitality focus areas">
-            <li class="chip">Guest numbers</li>
+          <ul class="chips-list" aria-label="Hospitality / F&B focus areas">
+            <li class="chip">Guest demand</li>
+            <li class="chip">Purchasing</li>
             <li class="chip">Preparation</li>
             <li class="chip">Food safety</li>
             <li class="chip">Service</li>
-            <li class="chip">Cost</li>
             <li class="chip">Surplus</li>
           </ul>
         </div>
@@ -359,8 +455,64 @@
         </div>
       </article>
 
-      <!-- ROLE: REDISTRIBUTION PARTNER -->
-      <article class="role-card" id="role-redistribution" tabindex="-1">
+      <!-- 6. CORPORATE / INSTITUTIONAL BUYER -->
+      <article class="role-card" id="role-corporate-buyer" tabindex="-1">
+        <div class="card-accent-bar" aria-hidden="true"></div>
+        <div class="role-header">
+          <h2 class="role-title">Corporate / Institutional Buyer</h2>
+          <div class="role-badge-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+              <path d="M9 22v-4h6v4"/>
+              <path d="M8 6h.01"/>
+              <path d="M16 6h.01"/>
+              <path d="M12 6h.01"/>
+              <path d="M8 10h.01"/>
+              <path d="M16 10h.01"/>
+              <path d="M12 10h.01"/>
+              <path d="M8 14h.01"/>
+              <path d="M16 14h.01"/>
+              <path d="M12 14h.01"/>
+            </svg>
+          </div>
+        </div>
+
+        <p class="role-description">
+          “You purchase food or catering services for an organisation, workplace, school, hospital, event or other institution.”
+        </p>
+
+        <div class="role-section">
+          <div class="section-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            YOUR FOCUS
+          </div>
+          <ul class="chips-list" aria-label="Corporate / Institutional Buyer focus areas">
+            <li class="chip">Headcount</li>
+            <li class="chip">Ordering</li>
+            <li class="chip">Budgets</li>
+            <li class="chip">Service requirements</li>
+            <li class="chip">Demand forecasting</li>
+            <li class="chip">Unused food</li>
+          </ul>
+        </div>
+
+        <div class="think-callout">
+          <div class="think-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>THINK</span>
+          </div>
+          <p class="think-quote">“Are we ordering what we actually need, and what can we change if demand changes?”</p>
+        </div>
+
+        <div class="card-footer-action">
+          <button type="button" class="back-to-top-btn" data-target="top">↑ Choose another role</button>
+        </div>
+      </article>
+
+      <!-- 7. REDISTRIBUTION PARTNER -->
+      <article class="role-card" id="role-redistribution-partner" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
           <h2 class="role-title">Redistribution Partner</h2>
@@ -372,7 +524,7 @@
         </div>
 
         <p class="role-description">
-          “You help safe, edible surplus food reach people who can use it.”
+          “You help safe, edible surplus food reach people who can use it instead of allowing it to become waste.”
         </p>
 
         <div class="role-section">
@@ -380,7 +532,7 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
             YOUR FOCUS
           </div>
-          <ul class="chips-list" aria-label="Redistribution partner focus areas">
+          <ul class="chips-list" aria-label="Redistribution Partner focus areas">
             <li class="chip">Food safety</li>
             <li class="chip">Quantity</li>
             <li class="chip">Timing</li>
@@ -397,7 +549,7 @@
             </svg>
             <span>THINK</span>
           </div>
-          <p class="think-quote">“Can this food still safely feed people?”</p>
+          <p class="think-quote">“Can this food still safely feed people, and can we move it in time?”</p>
         </div>
 
         <div class="card-footer-action">
@@ -405,11 +557,11 @@
         </div>
       </article>
 
-      <!-- ROLE: RECOVERY PARTNER -->
-      <article class="role-card" id="role-recovery" tabindex="-1">
+      <!-- 8. CIRCULAR RESOURCE PARTNER -->
+      <article class="role-card" id="role-circular-resource-partner" tabindex="-1">
         <div class="card-accent-bar" aria-hidden="true"></div>
         <div class="role-header">
-          <h2 class="role-title">Recovery Partner</h2>
+          <h2 class="role-title">Circular Resource Partner</h2>
           <div class="role-badge-icon" aria-hidden="true">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 19H4.815a1.83 1.83 0 0 1-1.57-.881 1.785 1.785 0 0 1-.004-1.784L7.196 9.5"/>
@@ -420,7 +572,7 @@
         </div>
 
         <p class="role-description">
-          “You help recover value when food or material can no longer serve its original purpose.”
+          “You find productive uses for food or materials that can no longer remain in their original use.”
         </p>
 
         <div class="role-section">
@@ -428,12 +580,13 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
             YOUR FOCUS
           </div>
-          <ul class="chips-list" aria-label="Recovery partner focus areas">
+          <ul class="chips-list" aria-label="Circular Resource Partner focus areas">
             <li class="chip">Material type</li>
             <li class="chip">Condition</li>
             <li class="chip">Contamination</li>
             <li class="chip">Volume</li>
-            <li class="chip">Available recovery routes</li>
+            <li class="chip">Processing options</li>
+            <li class="chip">Recovery value</li>
           </ul>
         </div>
 
@@ -444,7 +597,7 @@
             </svg>
             <span>THINK</span>
           </div>
-          <p class="think-quote">“If this cannot stay as food, what is the next-best use?”</p>
+          <p class="think-quote">“If this cannot remain in its original use, what is the best next use for it?”</p>
         </div>
 
         <div class="card-footer-action">
@@ -471,11 +624,11 @@
 
         <div class="questions-grid">
           <div class="question-card">
-            <div class="question-num">PRINCIPLE 01</div>
+            <div class="question-num">QUESTION 01</div>
             <div class="question-text">“What are you protecting?”</div>
           </div>
           <div class="question-card">
-            <div class="question-num">PRINCIPLE 02</div>
+            <div class="question-num">QUESTION 02</div>
             <div class="question-text">“What might your decision shift elsewhere?”</div>
           </div>
         </div>
