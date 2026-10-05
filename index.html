@@ -6,9 +6,9 @@
   <title>KNOW YOUR ROLE — FOOD IS NOT WASTE® Simulation</title>
   
   <!-- SEO & Open Graph Metadata -->
-  <meta name="description" content="Know Your Role: Food security and circularity simulation companion for workshop participants.">
+  <meta name="description" content="Know Your Role: Interactive food security and circularity simulation companion for workshop participants.">
   <meta property="og:title" content="KNOW YOUR ROLE — FOOD IS NOT WASTE® Simulation">
-  <meta property="og:description" content="Quick reference guide for participants in the FOOD IS NOT WASTE® simulation workshop.">
+  <meta property="og:description" content="Interactive companion for participants in the FOOD IS NOT WASTE® simulation workshop.">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#070a13">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -64,6 +64,14 @@
       <p class="hero-copy">
         Select the role assigned to you. During the simulation, think and make decisions as this actor.
       </p>
+
+      <!-- SUBTLE SIMULATION INSTRUCTION -->
+      <div class="simulation-instruction-banner">
+        <span class="instruction-icon" aria-hidden="true">✦</span>
+        <p class="instruction-text">
+          Play your role realistically. There is no perfect answer. Make the decision your organisation would make with the information and constraints available to you.
+        </p>
+      </div>
 
       <!-- ROLE SELECTOR CARDS / BUTTONS (8 ROLES) -->
       <nav class="role-selector-grid" aria-label="Role selector">
@@ -219,11 +227,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You grow or produce food locally and supply it to manufacturers, distributors, retailers, hospitality businesses or other buyers.
+            You grow crops, raise livestock, or produce food locally. You supply fresh food to wholesalers, processors, retailers, hospitality businesses, or direct buyers.
           </p>
         </div>
 
@@ -231,43 +239,50 @@
         <div class="role-block">
           <h3 class="block-label">WHAT MATTERS TO YOU</h3>
           <ul class="chips-list" aria-label="What matters to Local Producer">
-            <li class="chip">Matching production with demand</li>
-            <li class="chip">Product quality and freshness</li>
-            <li class="chip">Harvest and production timing</li>
-            <li class="chip">Customer commitments</li>
-            <li class="chip">Storage capacity</li>
-            <li class="chip">Avoiding unsold surplus</li>
-            <li class="chip">Protecting your margins</li>
+            <li class="chip">Customer demand</li>
+            <li class="chip">Harvest timing</li>
+            <li class="chip">Yield & volume</li>
+            <li class="chip">Quality & freshness</li>
+            <li class="chip">Shelf life</li>
+            <li class="chip">Production costs</li>
+            <li class="chip">Buyer commitments</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Adjust future production</li>
-            <li class="action-item">Change harvest or production timing where possible</li>
-            <li class="action-item">Communicate early with buyers</li>
-            <li class="action-item">Find alternative customers</li>
-            <li class="action-item">Redirect suitable surplus</li>
-            <li class="action-item">Improve forecasting using demand information</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                You planned to harvest 2 tonnes of fresh tomatoes for a customer tomorrow.
+                The customer suddenly tells you they only need 60% of the original order. The tomatoes are perishable.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“How much should I produce?”</li>
-            <li class="ask-item">“What demand information do I actually have?”</li>
-            <li class="ask-item">“What happens if my buyer suddenly needs less?”</li>
-            <li class="ask-item">“Can I redirect surplus before its value is lost?”</li>
-            <li class="ask-item">“Am I preventing waste or simply passing the problem downstream?”</li>
+            <li class="ask-item">“What are you trying to protect first?”</li>
+            <li class="ask-item">“What information do you need before making a decision?”</li>
+            <li class="ask-item">“Who else in the food system could be affected by your choice?”</li>
+            <li class="ask-item">“What happens if you do nothing today?”</li>
+            <li class="ask-item">“Are you preventing waste — or moving the problem somewhere else?”</li>
           </ul>
         </div>
 
@@ -289,11 +304,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You import food or ingredients into the market, or turn ingredients into finished food products for other businesses and consumers.
+            You import food ingredients or finished goods into the market, or manufacture food products for distributors, retailers, and food services.
           </p>
         </div>
 
@@ -302,43 +317,49 @@
           <h3 class="block-label">WHAT MATTERS TO YOU</h3>
           <ul class="chips-list" aria-label="What matters to Importer / Manufacturer">
             <li class="chip">Demand forecasts</li>
-            <li class="chip">Import and production lead times</li>
+            <li class="chip">Import lead times</li>
             <li class="chip">Inventory levels</li>
-            <li class="chip">Shelf life</li>
             <li class="chip">Production efficiency</li>
-            <li class="chip">Customer orders</li>
-            <li class="chip">Storage capacity</li>
+            <li class="chip">Shelf life</li>
+            <li class="chip">Customer contracts</li>
             <li class="chip">Cost and margins</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Adjust future orders or production</li>
-            <li class="action-item">Change production volumes</li>
-            <li class="action-item">Delay or modify orders where possible</li>
-            <li class="action-item">Find alternative customers or channels</li>
-            <li class="action-item">Redirect suitable surplus</li>
-            <li class="action-item">Share inventory and demand information earlier</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                A large shipment of imported dairy products arrives at the port with a shorter remaining shelf life than agreed with your retail buyer.
+                The buyer refuses to accept the delivery under standard terms.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“Am I bringing or producing more than the system needs?”</li>
-            <li class="ask-item">“What information would have helped me forecast better?”</li>
-            <li class="ask-item">“Can existing stock be redirected?”</li>
-            <li class="ask-item">“What happens downstream if I continue with the original plan?”</li>
-            <li class="ask-item">“Am I solving the problem or transferring it to someone else?”</li>
+            <li class="ask-item">“What is your primary commercial risk right now?”</li>
+            <li class="ask-item">“What constraints are influencing your decision?”</li>
+            <li class="ask-item">“Who would you need to speak to across the supply chain?”</li>
+            <li class="ask-item">“What happens downstream if you continue with the original plan?”</li>
+            <li class="ask-item">“Are you solving the problem or transferring it to someone else?”</li>
           </ul>
         </div>
 
@@ -362,11 +383,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You store and transport food between different actors while maintaining the conditions needed to protect its quality and safety.
+            You store and transport food between different actors while maintaining temperature-controlled conditions to protect quality and safety.
           </p>
         </div>
 
@@ -374,45 +395,50 @@
         <div class="role-block">
           <h3 class="block-label">WHAT MATTERS TO YOU</h3>
           <ul class="chips-list" aria-label="What matters to Distributor / Cold Chain">
-            <li class="chip">Inventory</li>
             <li class="chip">Delivery schedules</li>
-            <li class="chip">Cold-chain integrity</li>
-            <li class="chip">Storage capacity</li>
-            <li class="chip">Transport capacity</li>
+            <li class="chip">Cold chain integrity</li>
+            <li class="chip">Warehouse capacity</li>
+            <li class="chip">Transport costs</li>
             <li class="chip">Product shelf life</li>
-            <li class="chip">Customer commitments</li>
-            <li class="chip">Cost of holding and moving stock</li>
+            <li class="chip">On-time commitments</li>
+            <li class="chip">Holding costs</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Hold stock where safe and practical</li>
-            <li class="action-item">Change delivery timing</li>
-            <li class="action-item">Reroute products</li>
-            <li class="action-item">Consolidate or modify deliveries</li>
-            <li class="action-item">Coordinate between suppliers and customers</li>
-            <li class="action-item">Identify alternative destinations before products lose value</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                A retail customer delays an incoming delivery of chilled meats by 48 hours due to unexpected warehouse congestion.
+                Your refrigerated trucks are queued outside and scheduled for other deliveries tomorrow.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“Where is the food right now?”</li>
-            <li class="ask-item">“How much shelf life remains?”</li>
-            <li class="ask-item">“Can I safely hold it?”</li>
-            <li class="ask-item">“Can I reroute it somewhere useful?”</li>
-            <li class="ask-item">“Who needs to know immediately?”</li>
-            <li class="ask-item">“Will my decision prevent waste or just move the problem elsewhere?”</li>
+            <li class="ask-item">“Where is the food physically right now, and how much shelf life remains?”</li>
+            <li class="ask-item">“What cost or constraint is compounding each hour you hold it?”</li>
+            <li class="ask-item">“Who needs to know about this bottleneck immediately?”</li>
+            <li class="ask-item">“What might another actor in the system want or need from you?”</li>
+            <li class="ask-item">“Will your decision prevent waste or just move the problem elsewhere?”</li>
           </ul>
         </div>
 
@@ -436,11 +462,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You sell food directly to consumers and manage stock across stores or other retail channels.
+            You sell food directly to consumers through supermarkets or grocery stores, balancing product availability on shelves with customer purchasing patterns.
           </p>
         </div>
 
@@ -449,44 +475,49 @@
           <h3 class="block-label">WHAT MATTERS TO YOU</h3>
           <ul class="chips-list" aria-label="What matters to Retailer">
             <li class="chip">Customer demand</li>
-            <li class="chip">Availability</li>
+            <li class="chip">Daily sales</li>
             <li class="chip">Stock levels</li>
             <li class="chip">Shelf life</li>
-            <li class="chip">Product appearance and quality</li>
-            <li class="chip">Storage and shelf space</li>
-            <li class="chip">Sales and margins</li>
-            <li class="chip">Unsold inventory</li>
+            <li class="chip">Food safety</li>
+            <li class="chip">Storage & shelf space</li>
+            <li class="chip">Margin</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Adjust future orders</li>
-            <li class="action-item">Change merchandising or promotions</li>
-            <li class="action-item">Mark down suitable products</li>
-            <li class="action-item">Transfer stock between locations</li>
-            <li class="action-item">Redirect eligible surplus</li>
-            <li class="action-item">Share better demand information with suppliers</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                Your supermarket has 500 packs of fresh yoghurt.
+                Weekend demand was lower than expected, and 200 packs may expire within three days.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“What is actually likely to sell?”</li>
-            <li class="ask-item">“How much shelf life remains?”</li>
-            <li class="ask-item">“Can I change price, promotion or location?”</li>
-            <li class="ask-item">“Can suitable surplus be redistributed?”</li>
-            <li class="ask-item">“Should I reduce future orders?”</li>
-            <li class="ask-item">“Does my decision create pressure somewhere else?”</li>
+            <li class="ask-item">“What are you trying to protect first: revenue, shelf space, or brand reputation?”</li>
+            <li class="ask-item">“What information would help you make this decision faster?”</li>
+            <li class="ask-item">“Who else in the food system could be affected by your choice?”</li>
+            <li class="ask-item">“What happens if you wait another 24 hours?”</li>
+            <li class="ask-item">“Does your decision solve the issue or create pressure somewhere else?”</li>
           </ul>
         </div>
 
@@ -510,11 +541,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You purchase, prepare and serve food through hotels, restaurants, catering, events or other food-service operations.
+            You purchase ingredients, prepare meals, and serve food across hotels, restaurants, catering, or event operations under tight service deadlines.
           </p>
         </div>
 
@@ -526,42 +557,46 @@
             <li class="chip">Customer experience</li>
             <li class="chip">Food safety</li>
             <li class="chip">Menu availability</li>
-            <li class="chip">Purchasing and preparation</li>
-            <li class="chip">Labour and operating costs</li>
-            <li class="chip">Portioning</li>
-            <li class="chip">Surplus food</li>
+            <li class="chip">Operating & food costs</li>
+            <li class="chip">Kitchen preparation timing</li>
+            <li class="chip">Storage capacity</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Adjust purchasing</li>
-            <li class="action-item">Change preparation quantities</li>
-            <li class="action-item">Adapt menus where practical</li>
-            <li class="action-item">Improve portion planning</li>
-            <li class="action-item">Use suitable ingredients elsewhere</li>
-            <li class="action-item">Redirect safe edible surplus</li>
-            <li class="action-item">Communicate demand changes earlier to suppliers</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                A large corporate event booked for 300 guests has a last-minute turnout of only 180 people.
+                A significant volume of prepared hot food and fresh buffet items remains unserved at the end of service.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“How many people am I actually serving?”</li>
-            <li class="ask-item">“What has already been ordered?”</li>
-            <li class="ask-item">“What has already been prepared?”</li>
-            <li class="ask-item">“What can still be changed?”</li>
-            <li class="ask-item">“Can safe surplus be redirected?”</li>
-            <li class="ask-item">“What could I have done earlier to prevent this situation?”</li>
+            <li class="ask-item">“What has already been prepared versus what is still unopened ingredient?”</li>
+            <li class="ask-item">“What food safety or health regulations strictly constrain your choices?”</li>
+            <li class="ask-item">“Who would you need to speak to immediately to take action?”</li>
+            <li class="ask-item">“What information could have prevented this discrepancy earlier?”</li>
+            <li class="ask-item">“What might another actor want or need from you in this moment?”</li>
           </ul>
         </div>
 
@@ -592,11 +627,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You purchase food, catering or food-service requirements for workplaces, schools, hospitals, events or other organisations.
+            You procure food and catering services for workplaces, schools, hospitals, or events, managing annual budgets and attendee service satisfaction.
           </p>
         </div>
 
@@ -605,44 +640,49 @@
           <h3 class="block-label">WHAT MATTERS TO YOU</h3>
           <ul class="chips-list" aria-label="What matters to Corporate / Institutional Buyer">
             <li class="chip">Expected headcount</li>
-            <li class="chip">Service requirements</li>
-            <li class="chip">Budgets</li>
-            <li class="chip">Quality</li>
-            <li class="chip">Reliability</li>
-            <li class="chip">Employee/guest experience</li>
+            <li class="chip">Budget control</li>
+            <li class="chip">Service reliability</li>
+            <li class="chip">Employee/guest satisfaction</li>
             <li class="chip">Contract commitments</li>
-            <li class="chip">Avoiding unnecessary orders</li>
+            <li class="chip">Avoiding food shortages</li>
+            <li class="chip">Order deadlines</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Improve headcount forecasting</li>
-            <li class="action-item">Adjust orders before cut-off times</li>
-            <li class="action-item">Communicate changes earlier</li>
-            <li class="action-item">Change service quantities</li>
-            <li class="action-item">Coordinate with caterers</li>
-            <li class="action-item">Plan for suitable surplus</li>
-            <li class="action-item">Use previous consumption data to improve future orders</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                Your catering contract specifies a daily hot buffet for 250 staff.
+                Due to hybrid working patterns on Thursdays, actual attendance drops to 140, leaving substantial unserved food every week.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“How accurate is my expected headcount?”</li>
-            <li class="ask-item">“When is the last point at which I can change the order?”</li>
-            <li class="ask-item">“Who needs to know if demand changes?”</li>
-            <li class="ask-item">“Am I ordering a buffer simply to avoid running short?”</li>
-            <li class="ask-item">“What happens to food I order but do not use?”</li>
+            <li class="ask-item">“Why are you ordering the quantity you currently specify?”</li>
+            <li class="ask-item">“What penalty or complaint occurs if you run short versus if you over-order?”</li>
+            <li class="ask-item">“When is the cut-off point where you can modify orders with your caterer?”</li>
+            <li class="ask-item">“What constraints are currently shaping your contract terms?”</li>
+            <li class="ask-item">“What happens to the food that is paid for but unused?”</li>
           </ul>
         </div>
 
@@ -663,11 +703,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You help safe, edible surplus food reach people who can use it instead of allowing it to become waste.
+            You operate non-profit food rescue organizations or charities, collecting safe, edible surplus food and distributing it to community recipients.
           </p>
         </div>
 
@@ -675,45 +715,50 @@
         <div class="role-block">
           <h3 class="block-label">WHAT MATTERS TO YOU</h3>
           <ul class="chips-list" aria-label="What matters to Redistribution Partner">
-            <li class="chip">Food safety</li>
+            <li class="chip">Food safety compliance</li>
             <li class="chip">Remaining shelf life</li>
-            <li class="chip">Quantity</li>
             <li class="chip">Collection timing</li>
-            <li class="chip">Transport</li>
-            <li class="chip">Storage</li>
-            <li class="chip">Recipient needs</li>
-            <li class="chip">Ability to distribute food quickly</li>
+            <li class="chip">Cold storage limits</li>
+            <li class="chip">Transport capacity</li>
+            <li class="chip">Recipient community needs</li>
+            <li class="chip">Distribution speed</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Assess whether food is suitable for redistribution</li>
-            <li class="action-item">Match surplus with recipients</li>
-            <li class="action-item">Arrange collection</li>
-            <li class="action-item">Coordinate timing</li>
-            <li class="action-item">Provide guidance on acceptable products</li>
-            <li class="action-item">Redirect food to appropriate organisations</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                A supplier calls offering 3 pallets of chilled sandwiches and fresh salads at 3:00 PM.
+                The food expires in 24 hours. Your collection vans are already dispatched and your central chiller is 90% full.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“Is the food still safe and suitable?”</li>
-            <li class="ask-item">“How much time do we have?”</li>
-            <li class="ask-item">“Who can receive it?”</li>
-            <li class="ask-item">“Can we collect and distribute it in time?”</li>
-            <li class="ask-item">“Do recipients actually need this product and quantity?”</li>
-            <li class="ask-item">“Could earlier communication have created a better outcome?”</li>
+            <li class="ask-item">“Is the food genuinely safe, suitable, and manageable in time?”</li>
+            <li class="ask-item">“What constraints are currently limiting your operational capacity?”</li>
+            <li class="ask-item">“Do recipients actually need this specific product and volume today?”</li>
+            <li class="ask-item">“What happens if you decline this offer?”</li>
+            <li class="ask-item">“Could earlier communication from donors have altered your capability?”</li>
           </ul>
         </div>
 
@@ -736,11 +781,11 @@
           </div>
         </div>
 
-        <!-- 1. WHAT YOU DO -->
+        <!-- 1. YOUR ROLE -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU DO</h3>
+          <h3 class="block-label">YOUR ROLE</h3>
           <p class="role-description">
-            You find productive uses for food or materials that can no longer remain in their original use, helping retain as much value as possible.
+            You process inedible food, organic by-products, and agricultural residues into compost, animal feed, biogas, or secondary biomaterials.
           </p>
         </div>
 
@@ -748,45 +793,50 @@
         <div class="role-block">
           <h3 class="block-label">WHAT MATTERS TO YOU</h3>
           <ul class="chips-list" aria-label="What matters to Circular Resource Partner">
-            <li class="chip">Material type</li>
-            <li class="chip">Condition</li>
-            <li class="chip">Contamination</li>
-            <li class="chip">Quantity</li>
-            <li class="chip">Consistency</li>
-            <li class="chip">Collection and transport</li>
-            <li class="chip">Processing capability</li>
-            <li class="chip">Value of the recovered output</li>
+            <li class="chip">Material contamination</li>
+            <li class="chip">Organic consistency</li>
+            <li class="chip">Volume & regular supply</li>
+            <li class="chip">Processing capacity</li>
+            <li class="chip">Logistics & haulage costs</li>
+            <li class="chip">Output product value</li>
+            <li class="chip">Operating licenses</li>
           </ul>
         </div>
 
-        <!-- 3. WHAT YOU CAN DO -->
+        <!-- 3. A SIMPLE EXAMPLE (COLLAPSIBLE) -->
         <div class="role-block">
-          <h3 class="block-label">WHAT YOU CAN DO</h3>
-          <ul class="action-list">
-            <li class="action-item">Assess available material</li>
-            <li class="action-item">Identify suitable recovery routes</li>
-            <li class="action-item">Separate materials where required</li>
-            <li class="action-item">Convert suitable material into another useful resource</li>
-            <li class="action-item">Coordinate collection and processing</li>
-            <li class="action-item">Advise businesses on segregation requirements</li>
-          </ul>
+          <details class="example-details">
+            <summary class="example-summary">
+              <span class="summary-text">SEE AN EXAMPLE</span>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="example-body">
+              <div class="example-situation-tag">SITUATION</div>
+              <p class="example-text">
+                A food producer offers you 5 tonnes of organic food waste daily, but it arrives mixed with plastic packaging, stickers, and cardboard liners.
+                Your processing equipment will clog if contamination exceeds 2%.
+              </p>
+              <p class="example-prompt">“What would you do?”</p>
+            </div>
+          </details>
         </div>
 
-        <!-- 4. DURING THE SIMULATION, ASK YOURSELF -->
+        <!-- 4. QUESTIONS TO THINK ABOUT -->
         <div class="think-callout">
           <div class="think-header">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span>DURING THE SIMULATION, ASK YOURSELF</span>
+            <span>QUESTIONS TO THINK ABOUT</span>
           </div>
           <ul class="ask-list">
-            <li class="ask-item">“Can this still be used for its original purpose first?”</li>
-            <li class="ask-item">“If not, what is the highest-value next use?”</li>
-            <li class="ask-item">“Is the material properly separated?”</li>
-            <li class="ask-item">“Is there enough volume to recover it practically?”</li>
-            <li class="ask-item">“What contamination or logistical constraints exist?”</li>
-            <li class="ask-item">“Are we recovering value or unnecessarily choosing a lower-value option?”</li>
+            <li class="ask-item">“Could this material have been kept as edible food or higher-value resource first?”</li>
+            <li class="ask-item">“What is the true cost of sorting or rejecting contaminated material?”</li>
+            <li class="ask-item">“Who would you need to speak with to change how this is segregated?”</li>
+            <li class="ask-item">“What incentives does the waste generator have to cooperate with you?”</li>
+            <li class="ask-item">“Are you truly recovering value or simply acting as an alternative disposal route?”</li>
           </ul>
         </div>
 
